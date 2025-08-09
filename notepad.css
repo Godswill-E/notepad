@@ -25,6 +25,7 @@ html::-webkit-scrollbar-thumb{
 p::-webkit-scrollbar{
     background-color: transparent;
     width:10px;
+    
 }
 
 p::-webkit-scrollbar-track{
@@ -129,7 +130,7 @@ body{
     top:0;
     left:0;
     backdrop-filter: blur(3px);
-   
+    
     position:fixed;
    
   
@@ -145,7 +146,7 @@ body{
     width:320px;
     color:rgb(0, 0, 0);
     padding:20px;
-    margin:40px auto;
+    margin:80px auto;
     box-shadow: 2px 2px 50px 0px rgba(66, 60, 5, 0.363);
     transition: all 0.5s ease-in;
   

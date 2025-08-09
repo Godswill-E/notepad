@@ -246,6 +246,22 @@ button:hover{
 
 /**** media query when its 320px screen ***/
 
+@media screen and (max-width:1080px){
+
+    .note-form{
+        background-color: rgb(0, 225, 255);
+        width:1000px;
+        color:rgb(0, 0, 0);
+        padding:20px;
+        margin:80px auto;
+        box-shadow: 2px 2px 50px 0px rgba(66, 60, 5, 0.363);
+        transition: all 0.5s ease-in;
+    
+        
+    }
+
+}
+
 @media screen and (max-width:380px){
 
     .note-form{
@@ -276,6 +292,17 @@ button:hover{
     
 
 }
+.note-form{
+        background-color: rgb(0, 225, 255);
+        width:320px;
+        color:rgb(0, 0, 0);
+        padding:20px;
+        margin:80px auto;
+        box-shadow: 2px 2px 50px 0px rgba(66, 60, 5, 0.363);
+        transition: all 0.5s ease-in;
+    
+        
+    }
 
 
 }

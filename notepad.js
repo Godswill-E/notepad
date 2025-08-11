@@ -14,12 +14,18 @@ const container = document.querySelector(".section");
 
 const addnote = document.querySelector(".addnote");
 
-const deletenote = document.getElementById("delete");
+const allitemslist = document.querySelector(".allitems");
+
+const deletenote = document.getElementById("#delete");
+
+
+
+
 
 
 addbutton.addEventListener('click', function(){
     notebox.classList.replace('closethis',"openthis")
-    console.log(notebox);
+    
 });
 
 function clear(){
@@ -34,32 +40,23 @@ close.addEventListener('click', function(e){
 
 });
 
+
+
+
+
 function addnotes(){
     addnote.addEventListener('click', function(){
-        const newlist = document.createElement("div");
-        newlist.setAttribute("class", "note-items");
+        const create = document.createElement('div');
+        create.setAttribute('class', 'note-items')
+        create.innerHTML = `<div><h2>${title.value}</h2><p>${content.value} </p><div class="buttons"><button id="delete" onclick="removethis(this)">Delete note 📌</button></div></div>`;
 
-        newlist.innerHTML = `
-            <div>
-                <h2>${title.value}</h2>
-                <p>${content.value} </p>
-                <div class="buttons"><button>Edit note 🖊️</button><button id="delete">Delete note 📌</button></div>
-            </div>
-        </div>
         
-        `;
-        let divnewlist = newlist;
-        let titleText = title.value;
-       
-        var store = container.appendChild(divnewlist);
-        
-        localStorage.setItem(titleText, divnewlist);
-        divnewlist = localStorage.getItem(titleText);
+        allitemslist.appendChild(create)
+        savedata();
 
         close.click();
         
-         
-        
+
     });
     
     
@@ -67,7 +64,24 @@ function addnotes(){
 addnotes();
 
 
+allitemslist.innerHTML = JSON.parse(localStorage.getItem('data'));
+console.log(JSON.parse(localStorage.getItem('data')));
+// console.log(notes);
 
-// deletenote.addEventListener('click', function(){
-//     deletenote.parentElement.parentElement.parentElement.remove();
-// });
+
+   
+function savedata(){
+localStorage.setItem('data', JSON.stringify(allitemslist.innerHTML));
+}
+
+
+
+
+
+
+function removethis(name){
+    name.parentElement.parentElement.parentElement.remove()
+    savedata();
+}
+
+ 

@@ -48,7 +48,7 @@ function addnotes(){
     addnote.addEventListener('click', function(){
         const create = document.createElement('div');
         create.setAttribute('class', 'note-items')
-        create.innerHTML = `<div><h2>${title.value}</h2><p>${content.value} </p><div class="buttons"><button id="delete" onclick="removethis(this)">Delete note 📌</button></div></div>`;
+        create.innerHTML = `<div><h2>${title.value}</h2><p>${content.value} </p><div class="buttons"><button id="delete" onclick="removethis(this)"> 📌 Delete note </button></div></div>`;
 
         
         allitemslist.appendChild(create)

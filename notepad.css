@@ -238,6 +238,8 @@ button:hover{
     border:0px;
     font-size:1rem;
     margin-top:10px;
+    border-radius:10px;
+    padding-right:15px;
     
    
 }

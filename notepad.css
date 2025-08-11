@@ -96,6 +96,7 @@ body{
     background-color: red;
     padding:10px;
     font-size:1rem;
+    color:white;
     cursor:pointer;
     float:right;
     left:0px;
@@ -326,4 +327,5 @@ button:hover{
 
 
 }
+
 

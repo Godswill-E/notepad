@@ -51,7 +51,7 @@ function addnotes(){
         create.innerHTML = `<div><h2>${title.value}</h2><p>${content.value} </p><div class="buttons"><button id="delete" onclick="removethis(this)"> 📌 Delete note </button></div></div>`;
 
         
-        allitemslist.appendChild(create)
+        allitemslist.appendChild(create  )
         savedata();
 
         close.click();
